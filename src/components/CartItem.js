@@ -1,7 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
+import { ListCartContext } from "../context/StateCart";
 
 function CartItem({ cart }) {
+  const [quantity, setQuantity] = useState(cart.quantity);
+  const { removeItem } = useContext(ListCartContext);
+  const handleClick = (cart) => {
+    removeItem(cart.id);
+  };
+
+  const handleChangeQuantity = (quantity) => {
+    if (quantity < 1) {
+      return quantity;
+    } else {
+      setQuantity(quantity);
+    }
+  };
   return (
     <tr>
       <th scope="row">
@@ -14,17 +28,23 @@ function CartItem({ cart }) {
       </td>
       <td>{cart.price}$</td>
       <td className="center-on-small-only">
-        <span className="qty">1 </span>
+        <span className="qty">{quantity} </span>
         <div className="btn-group radio-group" data-toggle="buttons">
-          <label className="btn btn-sm btn-primary btn-rounded waves-effect waves-light">
+          <label
+            className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
+            onClick={() => handleChangeQuantity(quantity - 1)}
+          >
             <a>—</a>
           </label>
-          <label className="btn btn-sm btn-primary btn-rounded waves-effect waves-light">
+          <label
+            className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
+            onClick={() => handleChangeQuantity(quantity + 1)}
+          >
             <a>+</a>
           </label>
         </div>
       </td>
-      <td>15$</td>
+      <td>{quantity * cart.price}$</td>
       <td>
         <button
           type="button"
@@ -32,6 +52,7 @@ function CartItem({ cart }) {
           data-toggle="tooltip"
           data-placement="top"
           data-original-title="Remove item"
+          onClick={() => handleClick(cart)}
         >
           X
         </button>
