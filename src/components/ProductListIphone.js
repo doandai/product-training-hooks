@@ -1,9 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ListIphoneContext } from "../context/StateIphone";
 import ProductIphone from "./ProductIphone";
 
 function ProductListIphone() {
-  const { listIphone } = useContext(ListIphoneContext);
+  const { listIphone, title } = useContext(ListIphoneContext);
+  if (title) {
+    return (
+      <div className="row">
+        {title.map((item) => {
+          return <ProductIphone key={item.id} item={item} />;
+        })}
+      </div>
+    );
+  }
   return (
     <div className="row">
       {listIphone.map((item) => {

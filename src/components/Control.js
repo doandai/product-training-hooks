@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import Search from "./Search";
 import Sort from "./Sort";
+import { ListIphoneContext } from "../context/StateIphone";
 
 function Control() {
+  const { listIphone } = useContext(ListIphoneContext);
   return (
     <Fragment>
       <Search />

@@ -1,21 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { ListCartContext } from "../context/StateCart";
 
 function CartItem({ cart }) {
   const [quantity, setQuantity] = useState(cart.quantity);
-  const { removeItem } = useContext(ListCartContext);
+  const { removeItem, changeQuantity } = useContext(ListCartContext);
   const handleClick = (cart) => {
     removeItem(cart.id);
   };
 
-  const handleChangeQuantity = (quantity) => {
+  const handleChangeQuantity = (cart, quantity) => {
     if (quantity < 1) {
       return quantity;
     } else {
       setQuantity(quantity);
+      changeQuantity(cart.id, quantity);
     }
   };
+  let total = quantity * cart.price;
   return (
     <tr>
       <th scope="row">
@@ -32,19 +34,19 @@ function CartItem({ cart }) {
         <div className="btn-group radio-group" data-toggle="buttons">
           <label
             className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
-            onClick={() => handleChangeQuantity(quantity - 1)}
+            onClick={() => handleChangeQuantity(cart, quantity - 1)}
           >
             <a>—</a>
           </label>
           <label
             className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
-            onClick={() => handleChangeQuantity(quantity + 1)}
+            onClick={() => handleChangeQuantity(cart, quantity + 1)}
           >
             <a>+</a>
           </label>
         </div>
       </td>
-      <td>{quantity * cart.price}$</td>
+      <td>{total}$</td>
       <td>
         <button
           type="button"

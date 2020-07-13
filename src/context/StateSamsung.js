@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const ListSamsungContext = createContext();
 function StateIphone(props) {
+  const [title, setTitle] = useState("");
   const [listSamsung, setListSamsung] = useState([
     {
       id: 1,
@@ -20,8 +21,15 @@ function StateIphone(props) {
       stars: 4,
     },
   ]);
+  const searchTextS = (key) => {
+    setTitle(
+      listSamsung.filter((text) => {
+        return text.name.toLocaleLowerCase().indexOf(key) !== -1;
+      })
+    );
+  };
   return (
-    <ListSamsungContext.Provider value={{ listSamsung }}>
+    <ListSamsungContext.Provider value={{ listSamsung, searchTextS, title }}>
       {props.children}
     </ListSamsungContext.Provider>
   );

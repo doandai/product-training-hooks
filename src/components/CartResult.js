@@ -1,6 +1,9 @@
 import React from "react";
 
-function CartResult() {
+function CartResult({ cart, changeQuantity }) {
+  const total = cart
+    .map((cart) => cart.quantity * cart.price)
+    .reduce((item, price) => item + price, 0);
   return (
     <tr>
       <td colSpan={3} />
@@ -11,7 +14,7 @@ function CartResult() {
       </td>
       <td>
         <h4>
-          <strong>15$</strong>
+          <strong>{total}$</strong>
         </h4>
       </td>
       <td colSpan={3}>

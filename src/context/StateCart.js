@@ -1,10 +1,10 @@
 /* eslint-disable array-callback-return */
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 export const ListCartContext = createContext();
 
 function StateCart(props) {
-  const [quantity, setQuantity] = useState(1);
+  const [title, setTitle] = useState("");
   const [listCart, setListCart] = useState([
     {
       name: "Iphone X",
@@ -12,7 +12,7 @@ function StateCart(props) {
       img:
         "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72",
       stars: 5,
-      quantity: quantity,
+      quantity: 1,
     },
   ]);
 
@@ -44,9 +44,33 @@ function StateCart(props) {
   const removeItem = (id) => {
     setListCart(listCart.filter((cart) => cart.id !== id));
   };
-
+  const changeQuantity = (id, quantity) => {
+    const newListCart = [...listCart];
+    newListCart.find((cart) => {
+      if (cart.id === id) {
+        cart.quantity = quantity;
+      }
+    });
+    setListCart(newListCart);
+  };
+  const searchTextC = (key) => {
+    setTitle(
+      listCart.filter((text) => {
+        return text.name.toLocaleLowerCase().indexOf(key) !== -1;
+      })
+    );
+  };
   return (
-    <ListCartContext.Provider value={{ listCart, addItem, removeItem }}>
+    <ListCartContext.Provider
+      value={{
+        listCart,
+        addItem,
+        removeItem,
+        changeQuantity,
+        searchTextC,
+        title,
+      }}
+    >
       {props.children}
     </ListCartContext.Provider>
   );
