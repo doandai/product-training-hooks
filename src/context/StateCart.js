@@ -1,5 +1,5 @@
 /* eslint-disable array-callback-return */
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const ListCartContext = createContext();
 
@@ -7,17 +7,11 @@ function StateCart(props) {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState();
   const [value, setValue] = useState();
-  const [listCart, setListCart] = useState([
-    {
-      name: "Iphone X",
-      price: 500,
-      img:
-        "https://store.storeimages.cdn-apple.com/4974/as-images.apple.com/is/image/AppleInc/aos/published/images/H/H0/HH0H2/HH0H2?wid=445&hei=445&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=K7ik72",
-      stars: 5,
-      quantity: 1,
-    },
-  ]);
-
+  const initialState = JSON.parse(localStorage.getItem("listCart")) || [];
+  const [listCart, setListCart] = useState(initialState);
+  useEffect(() => {
+    localStorage.setItem("listCart", JSON.stringify(listCart));
+  }, [listCart]);
   const addItem = (item) => {
     const index = listCart.find((cart) => cart.id === item.id);
 
@@ -43,13 +37,12 @@ function StateCart(props) {
       });
       setListCart(newListCart);
     }
-    setPrice();
+    setTitle("");
   };
   const removeItem = (id) => {
     const newList = [...listCart];
     setListCart(newList.filter((cart) => cart.id !== id));
     setTitle("");
-    setPrice();
   };
   const changeQuantity = (id, quantity) => {
     const newListCart = [...listCart];
@@ -59,7 +52,6 @@ function StateCart(props) {
       }
     });
     setListCart(newListCart);
-    setPrice();
   };
   const searchTextC = (key) => {
     if (key) {
@@ -83,23 +75,19 @@ function StateCart(props) {
             return item;
           })
         );
-        setTitle("");
       } else if (value === 2) {
         setPrice(
           sortListCart.sort(function (a, b) {
             return a.price - b.price;
           })
         );
-        setTitle("");
       } else {
         setPrice(
           sortListCart.sort(function (a, b) {
             return b.price - a.price;
           })
         );
-        setTitle("");
       }
-      setTitle("");
     } else {
       setPrice();
     }

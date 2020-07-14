@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { ListIphoneContext } from "../context/StateIphone";
-import { ListSamsungContext } from "../context/StateSamsung";
+// import { ListIphoneContext } from "../context/StateIphone";
+// import { ListSamsungContext } from "../context/StateSamsung";
 import { ListCartContext } from "../context/StateCart";
 function Sort() {
   // const { sortPriceI } = useContext(ListIphoneContext);

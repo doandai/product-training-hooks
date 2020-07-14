@@ -2,7 +2,7 @@
 import React from "react";
 
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import routes from "./routes";
 import Header from "./components/Header";
 import Control from "./components/Control";
@@ -20,7 +20,9 @@ function App() {
               <main id="mainContainer">
                 <div className="container">
                   <section className="section">
-                    <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
+                    <Link to="/">
+                      <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
+                    </Link>
 
                     <Control />
                   </section>

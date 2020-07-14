@@ -21,7 +21,7 @@ function Search() {
       <input
         type="text"
         className="form-control"
-        placeholder="Search Name"
+        placeholder="Search Name Item"
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
         value={key}
