@@ -1,13 +1,11 @@
 import React, { createContext, useState } from "react";
 
 export const ListSamsungContext = createContext();
-function StateIphone(props) {
+function StateSamsung(props) {
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState();
-  const [value, setValue] = useState();
   const [listSamsung, setListSamsung] = useState([
     {
-      id: 1,
+      id: 4,
       name: "Samsung s10",
       price: 600,
       img:
@@ -15,7 +13,7 @@ function StateIphone(props) {
       stars: 5,
     },
     {
-      id: 2,
+      id: 5,
       name: "Samsung s6",
       price: 300,
       img:
@@ -24,46 +22,22 @@ function StateIphone(props) {
     },
   ]);
   const searchTextS = (key) => {
-    setTitle(
-      listSamsung.filter((text) => {
-        return text.name.toLocaleLowerCase().indexOf(key) !== -1;
-      })
-    );
-  };
-  const sortPriceS = (value) => {
-    value = parseInt(value);
-    console.log(value);
-    setValue(value);
-    if (value !== null) {
-      const newListSamsung = [...listSamsung];
-      if (value === -1) {
-        setPrice(
-          listSamsung.filter((item) => {
-            return item;
-          })
-        );
-      } else if (value === 0) {
-        setPrice(
-          newListSamsung.sort(function (a, b) {
-            return a.price - b.price;
-          })
-        );
-      } else {
-        setPrice(
-          newListSamsung.sort(function (a, b) {
-            return b.price - a.price;
-          })
-        );
-      }
+    if (key) {
+      setTitle(
+        listSamsung.filter((text) => {
+          return text.name.toLocaleLowerCase().indexOf(key) !== -1;
+        })
+      );
+    } else {
+      setTitle("");
     }
   };
+
   return (
-    <ListSamsungContext.Provider
-      value={{ listSamsung, searchTextS, title, sortPriceS, price }}
-    >
+    <ListSamsungContext.Provider value={{ listSamsung, searchTextS, title }}>
       {props.children}
     </ListSamsungContext.Provider>
   );
 }
 
-export default StateIphone;
+export default StateSamsung;

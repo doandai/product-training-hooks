@@ -5,33 +5,8 @@ import CartResult from "./CartResult";
 import { ListCartContext } from "../context/StateCart";
 
 function Cart() {
-  const { listCart, title, price } = useContext(ListCartContext);
-  if (price) {
-    return (
-      <section className="section">
-        <div className="table-responsive">
-          <table className="table product-table">
-            <thead>
-              <tr>
-                <th />
-                <th>Sản Phẩm</th>
-                <th>Giá</th>
-                <th>Số Lượng</th>
-                <th>Tổng Cộng</th>
-                <th />
-              </tr>
-            </thead>
-            <tbody>
-              {price.map((cart, index) => {
-                return <CartItem key={index} cart={cart} />;
-              })}
-              <CartResult cart={listCart} />
-            </tbody>
-          </table>
-        </div>
-      </section>
-    );
-  }
+  const { listCart, title } = useContext(ListCartContext);
+
   if (title) {
     return (
       <section className="section">

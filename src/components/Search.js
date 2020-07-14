@@ -14,7 +14,7 @@ function Search() {
     searchTextI(key);
     searchTextS(key);
     searchTextC(key);
-    setKey("");
+    setKey(`${key}`);
   };
   return (
     <div className="input-group mb-3">

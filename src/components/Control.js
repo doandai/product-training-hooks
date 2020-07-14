@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import Search from "./Search";
 import Sort from "./Sort";
 import { ListIphoneContext } from "../context/StateIphone";
@@ -6,10 +6,10 @@ import { ListIphoneContext } from "../context/StateIphone";
 function Control() {
   const { listIphone } = useContext(ListIphoneContext);
   return (
-    <Fragment>
+    <div className="control">
       <Search />
       <Sort />
-    </Fragment>
+    </div>
   );
 }
 export default Control;

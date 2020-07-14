@@ -3,8 +3,6 @@ import React, { createContext, useState } from "react";
 export const ListIphoneContext = createContext();
 function StateIphone(props) {
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState();
-  const [value, setValue] = useState();
   const [listIphone, setListIphone] = useState([
     {
       id: 1,
@@ -32,43 +30,19 @@ function StateIphone(props) {
     },
   ]);
   const searchTextI = (key) => {
-    setTitle(
-      listIphone.filter((text) => {
-        return text.name.toLocaleLowerCase().indexOf(key) !== -1;
-      })
-    );
-  };
-  const sortPriceI = (value) => {
-    value = parseInt(value);
-    console.log(value);
-    setValue(value);
-    if (value !== null) {
-      const newListIphone = [...listIphone];
-      if (value === -1) {
-        setPrice(
-          listIphone.filter((item) => {
-            return item;
-          })
-        );
-      } else if (value === 0) {
-        setPrice(
-          newListIphone.sort(function (a, b) {
-            return a.price - b.price;
-          })
-        );
-      } else {
-        setPrice(
-          newListIphone.sort(function (a, b) {
-            return b.price - a.price;
-          })
-        );
-      }
+    if (key) {
+      setTitle(
+        listIphone.filter((text) => {
+          return text.name.toLocaleLowerCase().indexOf(key) !== -1;
+        })
+      );
+    } else {
+      setTitle("");
     }
   };
+
   return (
-    <ListIphoneContext.Provider
-      value={{ listIphone, searchTextI, title, sortPriceI, price }}
-    >
+    <ListIphoneContext.Provider value={{ listIphone, searchTextI, title }}>
       {props.children}
     </ListIphoneContext.Provider>
   );

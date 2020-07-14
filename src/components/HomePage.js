@@ -2,7 +2,6 @@
 import React from "react";
 import ProductListIphone from "./ProductListIphone";
 import ProductListSamsung from "./ProductListSamsung";
-
 function HomePage() {
   return (
     <main id="mainContainer">

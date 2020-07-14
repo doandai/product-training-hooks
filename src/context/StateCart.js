@@ -5,8 +5,7 @@ export const ListCartContext = createContext();
 
 function StateCart(props) {
   const [title, setTitle] = useState("");
-  const [price, setPrice] = useState();
-  const [value, setValue] = useState();
+
   const [listCart, setListCart] = useState([
     {
       name: "Iphone X",
@@ -44,7 +43,9 @@ function StateCart(props) {
     }
   };
   const removeItem = (id) => {
-    setListCart(listCart.filter((cart) => cart.id !== id));
+    const newList = [...listCart];
+    setListCart(newList.filter((cart) => cart.id !== id));
+    setTitle("");
   };
   const changeQuantity = (id, quantity) => {
     const newListCart = [...listCart];
@@ -56,36 +57,14 @@ function StateCart(props) {
     setListCart(newListCart);
   };
   const searchTextC = (key) => {
-    setTitle(
-      listCart.filter((text) => {
-        return text.name.toLocaleLowerCase().indexOf(key) !== -1;
-      })
-    );
-  };
-  const sortPriceC = (value) => {
-    value = parseInt(value);
-    setValue(value);
-    if (value !== null) {
-      const sortListCart = [...listCart];
-      if (value === -1) {
-        setPrice(
-          listCart.filter((item) => {
-            return item;
-          })
-        );
-      } else if (value === 0) {
-        setPrice(
-          sortListCart.sort(function (a, b) {
-            return a.price - b.price;
-          })
-        );
-      } else {
-        setPrice(
-          sortListCart.sort(function (a, b) {
-            return b.price - a.price;
-          })
-        );
-      }
+    if (key) {
+      setTitle(
+        listCart.filter((text) => {
+          return text.name.toLocaleLowerCase().indexOf(key) !== -1;
+        })
+      );
+    } else {
+      setTitle("");
     }
   };
   return (
@@ -97,8 +76,6 @@ function StateCart(props) {
         changeQuantity,
         searchTextC,
         title,
-        sortPriceC,
-        price,
       }}
     >
       {props.children}

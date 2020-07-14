@@ -1,26 +1,8 @@
-import React, { useState, useContext } from "react";
-import { ListIphoneContext } from "../context/StateIphone";
-import { ListSamsungContext } from "../context/StateSamsung";
-import { ListCartContext } from "../context/StateCart";
-function Sort() {
-  const { sortPriceI } = useContext(ListIphoneContext);
-  const { sortPriceS } = useContext(ListSamsungContext);
-  const { sortPriceC } = useContext(ListCartContext);
+import React from "react";
 
-  const [filterPrice, setFilterPrice] = useState(-1);
-  const handleonChange = (e) => {
-    setFilterPrice(e.target.value);
-    sortPriceI(filterPrice ? e.target.value : filterPrice);
-    sortPriceS(filterPrice ? e.target.value : filterPrice);
-    sortPriceC(filterPrice ? e.target.value : filterPrice);
-  };
+function Sort() {
   return (
-    <select
-      className="form-control"
-      name="filterPrice"
-      value={filterPrice}
-      onChange={handleonChange}
-    >
+    <select className="form-control" name="filterPrice">
       <option value="-1">Tất Cả </option>
       <option value="0">Giá Tăng Dần </option>
       <option value="1">Giá Giảm Dần </option>
