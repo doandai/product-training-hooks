@@ -17,16 +17,15 @@ function App() {
         <StateSamsung>
           <Router>
             <div className="hidden-sn animated deep-purple-skin">
-              <Header />
               <main id="mainContainer">
                 <div className="container">
                   <section className="section">
                     <h1 className="section-heading">Danh Sách Sản Phẩm</h1>
-
                     <Control />
                   </section>
                 </div>
               </main>
+              <Header />
               <Switch>
                 {routes.map((route, i) => {
                   return (

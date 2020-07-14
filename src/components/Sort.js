@@ -1,32 +1,30 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-
+import React, { useState, useContext } from "react";
+import { ListIphoneContext } from "../context/StateIphone";
+import { ListSamsungContext } from "../context/StateSamsung";
+import { ListCartContext } from "../context/StateCart";
 function Sort() {
+  const { sortPriceI } = useContext(ListIphoneContext);
+  const { sortPriceS } = useContext(ListSamsungContext);
+  const { sortPriceC } = useContext(ListCartContext);
+
+  const [filterPrice, setFilterPrice] = useState(-1);
+  const handleonChange = (e) => {
+    setFilterPrice(e.target.value);
+    sortPriceI(filterPrice ? e.target.value : filterPrice);
+    sortPriceS(filterPrice ? e.target.value : filterPrice);
+    sortPriceC(filterPrice ? e.target.value : filterPrice);
+  };
   return (
-    <div className="dropdown mr-1">
-      <button
-        type="button"
-        className="btn btn-secondary dropdown-toggle"
-        id="dropdownMenuOffset"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-        data-offset="10,20"
-      >
-        Offset
-      </button>
-      <div className="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-        <a className="dropdown-item" href="#">
-          Action
-        </a>
-        <a className="dropdown-item" href="#">
-          Another action
-        </a>
-        <a className="dropdown-item" href="#">
-          Something else here
-        </a>
-      </div>
-    </div>
+    <select
+      className="form-control"
+      name="filterPrice"
+      value={filterPrice}
+      onChange={handleonChange}
+    >
+      <option value="-1">Tất Cả </option>
+      <option value="0">Giá Tăng Dần </option>
+      <option value="1">Giá Giảm Dần </option>
+    </select>
   );
 }
 
