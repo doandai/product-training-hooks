@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.cart-number {
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  width: 2.5%;
+  background-color: #f2a900;
+
+  position: absolute;
+  right: -3px;
+  top: 10;
+  margin-top: -0.4rem;
+  font-size: 0.8rem;
+  text-align: center;
+}

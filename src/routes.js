@@ -3,6 +3,7 @@ import ProductListIphone from "./components/ProductListIphone";
 import Cart from "./components/Cart";
 import HomePage from "./components/HomePage";
 import ProductListSamsung from "./components/ProductListSamsung";
+import NotFound from "./components/NotFound";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/Cart",
     exact: false,
     main: () => <Cart />,
+  },
+  {
+    path: "",
+    exact: false,
+    main: () => <NotFound />,
   },
 ];
 

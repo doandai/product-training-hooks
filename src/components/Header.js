@@ -1,7 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
+import { ListCartContext } from "../context/StateCart";
 function Header() {
+  const { listCart } = useContext(ListCartContext);
   return (
     <header>
       <nav className="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar double-nav">
@@ -14,12 +17,15 @@ function Header() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <i className="fa fa-user" /> Menu
+              <i className="fa fa-bars" /> Menu
             </a>
             <div
               className="dropdown-menu dropdown-menu-left"
               aria-labelledby="dropdownMenu1"
             >
+              <Link className="dropdown-item waves-effect waves-light" to="/">
+                Home
+              </Link>
               <Link
                 className="dropdown-item waves-effect waves-light"
                 to="/iphone"
@@ -32,6 +38,9 @@ function Header() {
               >
                 SamSung
               </Link>
+              <Link className="dropdown-item waves-effect waves-light" to="/">
+                Contact
+              </Link>
             </div>
           </li>
         </ul>
@@ -40,6 +49,7 @@ function Header() {
           <Link to="/cart">
             <i className="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
           </Link>
+          <span className="cart-number">{listCart.length}</span>
         </ul>
       </nav>
     </header>
