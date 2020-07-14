@@ -5,7 +5,8 @@ export const ListCartContext = createContext();
 
 function StateCart(props) {
   const [title, setTitle] = useState("");
-
+  const [price, setPrice] = useState();
+  const [value, setValue] = useState();
   const [listCart, setListCart] = useState([
     {
       name: "Iphone X",
@@ -21,8 +22,9 @@ function StateCart(props) {
     const index = listCart.find((cart) => cart.id === item.id);
 
     if (index === undefined) {
+      const newListCart = [...listCart];
       setListCart([
-        ...listCart,
+        ...newListCart,
         {
           name: item.name,
           id: item.id,
@@ -41,11 +43,13 @@ function StateCart(props) {
       });
       setListCart(newListCart);
     }
+    setPrice();
   };
   const removeItem = (id) => {
     const newList = [...listCart];
     setListCart(newList.filter((cart) => cart.id !== id));
     setTitle("");
+    setPrice();
   };
   const changeQuantity = (id, quantity) => {
     const newListCart = [...listCart];
@@ -55,6 +59,7 @@ function StateCart(props) {
       }
     });
     setListCart(newListCart);
+    setPrice();
   };
   const searchTextC = (key) => {
     if (key) {
@@ -67,6 +72,38 @@ function StateCart(props) {
       setTitle("");
     }
   };
+  const sortPriceC = (value) => {
+    value = parseInt(value);
+    setValue(value);
+    if (value) {
+      const sortListCart = [...listCart];
+      if (value === 1) {
+        setPrice(
+          sortListCart.filter((item) => {
+            return item;
+          })
+        );
+        setTitle("");
+      } else if (value === 2) {
+        setPrice(
+          sortListCart.sort(function (a, b) {
+            return a.price - b.price;
+          })
+        );
+        setTitle("");
+      } else {
+        setPrice(
+          sortListCart.sort(function (a, b) {
+            return b.price - a.price;
+          })
+        );
+        setTitle("");
+      }
+      setTitle("");
+    } else {
+      setPrice();
+    }
+  };
   return (
     <ListCartContext.Provider
       value={{
@@ -76,6 +113,8 @@ function StateCart(props) {
         changeQuantity,
         searchTextC,
         title,
+        sortPriceC,
+        price,
       }}
     >
       {props.children}
