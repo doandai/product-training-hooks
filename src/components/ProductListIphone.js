@@ -3,8 +3,17 @@ import { ListIphoneContext } from "../context/StateIphone";
 import ProductIphone from "./ProductIphone";
 
 function ProductListIphone() {
-  const { listIphone, title } = useContext(ListIphoneContext);
+  const { listIphone, title, price } = useContext(ListIphoneContext);
 
+  if (price) {
+    return (
+      <div className="row">
+        {price.map((item) => {
+          return <ProductIphone key={item.id} item={item} />;
+        })}
+      </div>
+    );
+  }
   if (title) {
     return (
       <div className="row">

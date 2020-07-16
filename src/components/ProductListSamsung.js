@@ -3,8 +3,16 @@ import { ListSamsungContext } from "../context/StateSamsung";
 import ProductSamsung from "./ProductSamsung";
 
 function ProductListSamsung() {
-  const { listSamsung, title } = useContext(ListSamsungContext);
-
+  const { listSamsung, title, price } = useContext(ListSamsungContext);
+  if (price) {
+    return (
+      <div className="row">
+        {price.map((item) => {
+          return <ProductSamsung key={item.id} item={item} />;
+        })}
+      </div>
+    );
+  }
   if (title) {
     return (
       <div className="row">

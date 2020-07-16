@@ -5,6 +5,7 @@ import "../App.css";
 import { ListCartContext } from "../context/StateCart";
 function Header() {
   const { listCart } = useContext(ListCartContext);
+
   return (
     <header>
       <nav className="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar double-nav">

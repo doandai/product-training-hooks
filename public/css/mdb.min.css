@@ -971,29 +971,17 @@ input[type="range"] {
 .card.card-dark .card-body a,
 .clockpicker-display .clockpicker-display-column #click-am.text-primary,
 .clockpicker-display .clockpicker-display-column #click-pm.text-primary,
-.clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-hours.text-primary,
-.clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-minutes.text-primary,
+.clockpicker-display .clockpicker-display-column .clockpicker-span-hours.text-primary,
+.clockpicker-display .clockpicker-display-column .clockpicker-span-minutes.text-primary,
 .colorful-side-nav .collapsible a,
 .colorful-side-nav .social a,
 .colorful-side-nav p,
 .dark-side-nav .collapsible a,
 .dark-side-nav .social a,
 .dark-side-nav p,
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-tick,
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-tick,
 .darktheme .picker__box .picker__date-display .clockpicker-display,
-.darktheme
-  .picker__box
-  .picker__date-display
-  .clockpicker-display
-  .clockpicker-span-am-pm,
+.darktheme .picker__box .picker__date-display .clockpicker-display .clockpicker-span-am-pm,
 .darktheme .picker__box .picker__footer button,
 .dropdown .dropdown-menu .dropdown-item:active,
 .dropdown .dropdown-menu .dropdown-item:hover,
@@ -1008,22 +996,10 @@ input[type="range"] {
 .picker__box .picker__table .picker__day--selected,
 .picker__box .picker__table .picker__day--selected:hover,
 .picker__date-display,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-am.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-pm.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-hours.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-minutes.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-am.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-pm.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column .clockpicker-span-hours.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column .clockpicker-span-minutes.text-primary,
 .picker__list-item--selected,
 .picker__list-item--selected:hover,
 .side-nav,
@@ -1412,8 +1388,7 @@ section .contact {
 .side-nav,
 .social-list,
 .z-depth-1 {
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .btn-floating,
@@ -1440,8 +1415,7 @@ section .contact {
 .reply-form .badge,
 .z-depth-1-half,
 ul.instagram-photos li img {
-  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
-    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 .btn-floating:hover,
@@ -1454,27 +1428,20 @@ ul.instagram-photos li img {
 .reply-form img,
 .testimonial-carousel .testimonial .avatar img,
 .z-depth-2 {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .z-depth-3 {
-  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .z-depth-4 {
-  -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
-    0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
-    0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  -webkit-box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 .z-depth-5 {
-  -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2),
-    0 40px 77px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2),
-    0 40px 77px 0 rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 .hoverable {
   -webkit-transition: -webkit-box-shadow 0.55s;
@@ -1489,8 +1456,7 @@ ul.instagram-photos li img {
   transition: -webkit-box-shadow 0.45s;
   transition: box-shadow 0.45s;
   transition: box-shadow 0.45s, -webkit-box-shadow 0.45s;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 a {
@@ -3078,18 +3044,14 @@ a:not([href]):not([tabindex]):hover {
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -3114,18 +3076,14 @@ a:not([href]):not([tabindex]):hover {
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
@@ -5690,15 +5648,11 @@ a:not([href]):not([tabindex]):hover {
   }
   .center-on-small-only .comments-list img,
   .center-on-small-only .img-fluid,
-  .center-on-small-only
-    .modal-dialog.cascading-modal.modal-avatar
-    .modal-header,
+  .center-on-small-only .modal-dialog.cascading-modal.modal-avatar .modal-header,
   .center-on-small-only .reply-form img,
   .center-on-small-only .section-blog-fw .view img,
   .comments-list .center-on-small-only img,
-  .modal-dialog.cascading-modal.modal-avatar
-    .center-on-small-only
-    .modal-header,
+  .modal-dialog.cascading-modal.modal-avatar .center-on-small-only .modal-header,
   .reply-form .center-on-small-only img,
   .section-blog-fw .view .center-on-small-only img {
     display: inline;
@@ -5824,8 +5778,7 @@ h6 {
   font-family: Roboto;
   src: local(Roboto Thin), url(../font/roboto/Roboto-Thin.eot);
   src: url(../font/roboto/Roboto-Thin.eot?#iefix) format("embedded-opentype"),
-    url(../font/roboto/Roboto-Thin.woff2) format("woff2"),
-    url(../font/roboto/Roboto-Thin.woff) format("woff"),
+    url(../font/roboto/Roboto-Thin.woff2) format("woff2"), url(../font/roboto/Roboto-Thin.woff) format("woff"),
     url(../font/roboto/Roboto-Thin.ttf) format("truetype");
   font-weight: 200;
 }
@@ -5833,8 +5786,7 @@ h6 {
   font-family: Roboto;
   src: local(Roboto Light), url(../font/roboto/Roboto-Light.eot);
   src: url(../font/roboto/Roboto-Light.eot?#iefix) format("embedded-opentype"),
-    url(../font/roboto/Roboto-Light.woff2) format("woff2"),
-    url(../font/roboto/Roboto-Light.woff) format("woff"),
+    url(../font/roboto/Roboto-Light.woff2) format("woff2"), url(../font/roboto/Roboto-Light.woff) format("woff"),
     url(../font/roboto/Roboto-Light.ttf) format("truetype");
   font-weight: 300;
 }
@@ -5842,8 +5794,7 @@ h6 {
   font-family: Roboto;
   src: local(Roboto Regular), url(../font/roboto/Roboto-Regular.eot);
   src: url(../font/roboto/Roboto-Regular.eot?#iefix) format("embedded-opentype"),
-    url(../font/roboto/Roboto-Regular.woff2) format("woff2"),
-    url(../font/roboto/Roboto-Regular.woff) format("woff"),
+    url(../font/roboto/Roboto-Regular.woff2) format("woff2"), url(../font/roboto/Roboto-Regular.woff) format("woff"),
     url(../font/roboto/Roboto-Regular.ttf) format("truetype");
   font-weight: 400;
 }
@@ -5851,8 +5802,7 @@ h6 {
   font-family: Roboto;
   src: url(../font/roboto/Roboto-Medium.eot);
   src: url(../font/roboto/Roboto-Medium.eot?#iefix) format("embedded-opentype"),
-    url(../font/roboto/Roboto-Medium.woff2) format("woff2"),
-    url(../font/roboto/Roboto-Medium.woff) format("woff"),
+    url(../font/roboto/Roboto-Medium.woff2) format("woff2"), url(../font/roboto/Roboto-Medium.woff) format("woff"),
     url(../font/roboto/Roboto-Medium.ttf) format("truetype");
   font-weight: 500;
 }
@@ -5860,8 +5810,7 @@ h6 {
   font-family: Roboto;
   src: url(../font/roboto/Roboto-Bold.eot);
   src: url(../font/roboto/Roboto-Bold.eot?#iefix) format("embedded-opentype"),
-    url(../font/roboto/Roboto-Bold.woff2) format("woff2"),
-    url(../font/roboto/Roboto-Bold.woff) format("woff"),
+    url(../font/roboto/Roboto-Bold.woff2) format("woff2"), url(../font/roboto/Roboto-Bold.woff) format("woff"),
     url(../font/roboto/Roboto-Bold.ttf) format("truetype");
   font-weight: 700;
 }
@@ -7775,10 +7724,8 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle {
   background-color: #ff8e38 !important;
 }
-.modal-dialog.modal-notify.modal-warning
-  .btn-primary-modal.dropdown-toggle:focus,
-.modal-dialog.modal-notify.modal-warning
-  .btn-primary-modal.dropdown-toggle:hover {
+.modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle:focus,
+.modal-dialog.modal-notify.modal-warning .btn-primary-modal.dropdown-toggle:hover {
   background-color: #ff9c52 !important;
 }
 .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal {
@@ -7788,8 +7735,7 @@ body.scrollable {
 }
 .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal.active,
 .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:active,
-.modal-dialog.modal-notify.modal-warning
-  .btn-outline-secondary-modal:active:focus,
+.modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:active:focus,
 .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:focus,
 .modal-dialog.modal-notify.modal-warning .btn-outline-secondary-modal:hover {
   background-color: transparent;
@@ -7813,10 +7759,8 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle {
   background-color: #01d36b !important;
 }
-.modal-dialog.modal-notify.modal-success
-  .btn-primary-modal.dropdown-toggle:focus,
-.modal-dialog.modal-notify.modal-success
-  .btn-primary-modal.dropdown-toggle:hover {
+.modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle:focus,
+.modal-dialog.modal-notify.modal-success .btn-primary-modal.dropdown-toggle:hover {
   background-color: #01ec78 !important;
 }
 .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal {
@@ -7826,8 +7770,7 @@ body.scrollable {
 }
 .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal.active,
 .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:active,
-.modal-dialog.modal-notify.modal-success
-  .btn-outline-secondary-modal:active:focus,
+.modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:active:focus,
 .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:focus,
 .modal-dialog.modal-notify.modal-success .btn-outline-secondary-modal:hover {
   background-color: transparent;
@@ -7851,10 +7794,8 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle {
   background-color: #ff4b4b !important;
 }
-.modal-dialog.modal-notify.modal-danger
-  .btn-primary-modal.dropdown-toggle:focus,
-.modal-dialog.modal-notify.modal-danger
-  .btn-primary-modal.dropdown-toggle:hover {
+.modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle:focus,
+.modal-dialog.modal-notify.modal-danger .btn-primary-modal.dropdown-toggle:hover {
   background-color: #ff6565 !important;
 }
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal {
@@ -7864,8 +7805,7 @@ body.scrollable {
 }
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal.active,
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:active,
-.modal-dialog.modal-notify.modal-danger
-  .btn-outline-secondary-modal:active:focus,
+.modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:active:focus,
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:focus,
 .modal-dialog.modal-notify.modal-danger .btn-outline-secondary-modal:hover {
   background-color: transparent;
@@ -8678,10 +8618,9 @@ input[type="url"].input-alternate,
 textarea.md-textarea.input-alternate {
   padding: 0 15px;
   height: 2.1rem;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
-    0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   font-size: 0.875rem;
   border-bottom: 0;
   -webkit-transition: none !important;
@@ -8711,8 +8650,7 @@ input[type="url"].input-alternate:focus,
 input[type="url"].input-alternate:hover,
 textarea.md-textarea.input-alternate:focus,
 textarea.md-textarea.input-alternate:hover {
-  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
   border-bottom: 0;
 }
@@ -10202,12 +10140,7 @@ table.table-sm th {
 .colorful-select .dropdown-content li.active span {
   color: #fff !important;
 }
-.colorful-select
-  .dropdown-content
-  li.active
-  span
-  [type="checkbox"]:checked
-  + label:before {
+.colorful-select .dropdown-content li.active span [type="checkbox"]:checked + label:before {
   border-color: transparent #fff #fff transparent;
 }
 .colorful-select .dropdown-content li a:hover,
@@ -10218,26 +10151,11 @@ table.table-sm th {
   border-radius: 2px;
 }
 .colorful-select .dropdown-content li a:hover [type="checkbox"] + label:before,
-.colorful-select
-  .dropdown-content
-  li
-  span:hover
-  [type="checkbox"]
-  + label:before {
+.colorful-select .dropdown-content li span:hover [type="checkbox"] + label:before {
   border-color: #fff;
 }
-.colorful-select
-  .dropdown-content
-  li
-  a:hover
-  [type="checkbox"]:checked
-  + label:before,
-.colorful-select
-  .dropdown-content
-  li
-  span:hover
-  [type="checkbox"]:checked
-  + label:before {
+.colorful-select .dropdown-content li a:hover [type="checkbox"]:checked + label:before,
+.colorful-select .dropdown-content li span:hover [type="checkbox"]:checked + label:before {
   border-color: transparent #fff #fff transparent;
 }
 .colorful-select .dropdown-content li.disabled.active span,
@@ -10593,8 +10511,7 @@ table.table-sm th {
   -webkit-transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   transition: -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
   transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
-  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1),
-    -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
+  transition: transform 333ms cubic-bezier(0.4, 0, 0.22, 1), -webkit-transform 333ms cubic-bezier(0.4, 0, 0.22, 1);
 }
 .pswp__bg {
   background: #000;
@@ -11428,10 +11345,9 @@ input[type="range"] + .thumb .value {
   content: "";
   left: 0;
   position: absolute;
-  -webkit-transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s,
-    height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
-  transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s,
-    height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
+  -webkit-transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s, height 0.2s 0.1s, top 0.2s 0.1s,
+    left 0.2s 0.1s;
+  transition: border 0.25s, background-color 0.25s, width 0.2s 0.1s, height 0.2s 0.1s, top 0.2s 0.1s, left 0.2s 0.1s;
   z-index: 1;
   border-style: solid;
   border-width: 2px;
@@ -11569,7 +11485,7 @@ select:disabled {
 }
 select {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: none !important;
+  display: none;
 }
 select.browser-default {
   display: block !important;
@@ -11628,18 +11544,12 @@ select.browser-default {
   background-color: #a6c;
   left: 24px;
 }
-.switch
-  label
-  input[type="checkbox"]:checked:not(:disabled)
-  ~ .lever:active:after {
-  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4),
-    0 0 0 15px rgba(170, 102, 204, 0.1);
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4),
-    0 0 0 15px rgba(170, 102, 204, 0.1);
+.switch label input[type="checkbox"]:checked:not(:disabled) ~ .lever:active:after {
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(170, 102, 204, 0.1);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(170, 102, 204, 0.1);
 }
 .switch label input[type="checkbox"]:not(:disabled) ~ .lever:active:after {
-  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4),
-    0 0 0 15px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.08);
 }
 .switch label input[type="checkbox"]:disabled + .lever {
@@ -11669,12 +11579,10 @@ select.browser-default {
   box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
   left: -5px;
   top: -3px;
-  -webkit-transition: left 0.3s ease, background 0.3s ease,
-    -webkit-box-shadow 0.1s ease;
+  -webkit-transition: left 0.3s ease, background 0.3s ease, -webkit-box-shadow 0.1s ease;
   transition: left 0.3s ease, background 0.3s ease, -webkit-box-shadow 0.1s ease;
   transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
-  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease,
-    -webkit-box-shadow 0.1s ease;
+  transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease, -webkit-box-shadow 0.1s ease;
 }
 .file-field {
   position: relative;
@@ -12173,9 +12081,7 @@ input[type="range"]:focus::-ms-fill-upper {
 .side-nav.side-nav-light .search-form input[type="text"]::-ms-placeholder {
   color: #555 !important;
 }
-.side-nav.side-nav-light
-  .search-form
-  input[type="text"]::-webkit-input-placeholder {
+.side-nav.side-nav-light .search-form input[type="text"]::-webkit-input-placeholder {
   color: #555 !important;
 }
 .side-nav.side-nav-light .search-form input[type="text"]::-moz-placeholder {
@@ -12729,8 +12635,7 @@ button.toast-close-button {
 #toast-container > :hover {
   -webkit-transition: 0.45s;
   transition: 0.45s;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: 1;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -12864,15 +12769,12 @@ button.toast-close-button {
   bottom: 0;
 }
 .progress .indeterminate:before {
-  -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395)
-    infinite;
+  -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
   animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
 }
 .progress .indeterminate:after {
-  -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)
-    infinite;
-  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1)
-    infinite;
+  -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
   -webkit-animation-delay: 1.15s;
   animation-delay: 1.15s;
 }
@@ -13027,35 +12929,27 @@ button.toast-close-button {
   }
 }
 .active .spinner-layer.spinner-blue {
-  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
-      infinite both,
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-      both,
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-red {
-  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
-      infinite both,
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     red-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-      both,
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     red-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-yellow {
-  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
-      infinite both,
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     yellow-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-      both,
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     yellow-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-green {
-  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
-      infinite both,
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     green-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
-  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-      both,
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both,
     green-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-blue-only,
@@ -13064,18 +12958,15 @@ button.toast-close-button {
 .active .spinner-layer.spinner-red-only,
 .active .spinner-layer.spinner-yellow-only {
   opacity: 1;
-  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
-    infinite both;
-  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-    both;
+  -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .circle-clipper.left .circle {
   -webkit-animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .circle-clipper.right .circle {
-  -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite
-    both;
+  -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 @-webkit-keyframes fill-unfill-rotate {
@@ -13281,10 +13172,8 @@ button.toast-close-button {
   }
 }
 #spinnerContainer.cooldown {
-  -webkit-animation: container-rotate 1568ms linear infinite,
-    fade-out 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: container-rotate 1568ms linear infinite,
-    fade-out 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: container-rotate 1568ms linear infinite, fade-out 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: container-rotate 1568ms linear infinite, fade-out 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @-webkit-keyframes fade-out {
   from {
@@ -13344,10 +13233,9 @@ button.toast-close-button {
   position: absolute;
   background-color: #aaa;
   border-radius: 6px;
-  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   bottom: 2px;
   height: 6px;
 }
@@ -13377,10 +13265,9 @@ button.toast-close-button {
   position: absolute;
   background-color: #aaa;
   border-radius: 6px;
-  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-  transition: background-color 0.2s linear, height 0.2s linear,
-    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear, width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   right: 2px;
   width: 6px;
 }
@@ -13482,10 +13369,7 @@ button.toast-close-button {
 .white-skin .side-nav .search-form input[type="text"]::-ms-placeholder {
   color: rgba(66, 66, 66, 0.5) !important;
 }
-.white-skin
-  .side-nav
-  .search-form
-  input[type="text"]::-webkit-input-placeholder {
+.white-skin .side-nav .search-form input[type="text"]::-webkit-input-placeholder {
   color: rgba(66, 66, 66, 0.5) !important;
 }
 .white-skin .side-nav .search-form input[type="text"]::-moz-placeholder {
@@ -15476,33 +15360,15 @@ button.toast-close-button {
   padding: 10px 10px 0;
   color: #b2dfdb;
 }
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-am.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-pm.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-hours.text-primary,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-minutes.text-primary {
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-am.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-pm.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column .clockpicker-span-hours.text-primary,
+.picker__date-display .clockpicker-display .clockpicker-display-column .clockpicker-span-minutes.text-primary {
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-am,
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-column
-  #click-pm {
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-am,
+.picker__date-display .clockpicker-display .clockpicker-display-column #click-pm {
   cursor: pointer;
 }
 .picker__date-display .clockpicker-display .clockpicker-display-am-pm {
@@ -15510,10 +15376,7 @@ button.toast-close-button {
   vertical-align: bottom;
   height: 85px;
 }
-.picker__date-display
-  .clockpicker-display
-  .clockpicker-display-am-pm
-  .clockpicker-span-am-pm {
+.picker__date-display .clockpicker-display .clockpicker-display-am-pm .clockpicker-span-am-pm {
   display: inline-block;
   font-size: 23px;
   line-height: 25px;
@@ -15541,12 +15404,8 @@ button.toast-close-button {
 }
 .clockpicker-display .clockpicker-display-column #click-am.text-primary,
 .clockpicker-display .clockpicker-display-column #click-pm.text-primary,
-.clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-hours.text-primary,
-.clockpicker-display
-  .clockpicker-display-column
-  .clockpicker-span-minutes.text-primary {
+.clockpicker-display .clockpicker-display-column .clockpicker-span-hours.text-primary,
+.clockpicker-display .clockpicker-display-column .clockpicker-span-minutes.text-primary {
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
@@ -15726,65 +15585,28 @@ button.toast-close-button {
 .darktheme .picker__box .picker__date-display {
   background-color: transparent;
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-tick {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-tick {
   background-color: rgba(255, 64, 129, 0);
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-tick.active,
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-tick:hover,
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-tick.active,
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-tick:hover,
 .darktheme .picker__box .picker__footer .clockpicker-button:active {
   background-color: rgba(255, 64, 129, 0.25);
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas
-  line {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas line {
   stroke: rgba(255, 64, 129, 0.25);
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas-bearing {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas-bearing {
   fill: #fff;
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas-fg {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas-fg {
   fill: rgba(255, 64, 129, 0);
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas-fg.active {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas-fg.active {
   fill: rgba(255, 64, 129, 0.5);
 }
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas-bg,
-.darktheme
-  .picker__box
-  .picker__calendar-container
-  .clockpicker-plate
-  .clockpicker-canvas-bg-trans {
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas-bg,
+.darktheme .picker__box .picker__calendar-container .clockpicker-plate .clockpicker-canvas-bg-trans {
   fill: rgba(255, 64, 129, 0.25);
 }
 .picker__box {
@@ -15992,9 +15814,7 @@ button.toast-close-button {
   cursor: default;
 }
 .picker__box .picker__table .picker__day--highlighted.picker__day--disabled,
-.picker__box
-  .picker__table
-  .picker__day--highlighted.picker__day--disabled:hover {
+.picker__box .picker__table .picker__day--highlighted.picker__day--disabled:hover {
   background: #bbb;
 }
 .picker__box .picker__footer {

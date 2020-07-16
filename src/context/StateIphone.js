@@ -3,6 +3,7 @@ import React, { createContext, useState } from "react";
 export const ListIphoneContext = createContext();
 function StateIphone(props) {
   const [title, setTitle] = useState("");
+  const [price, setPrice] = useState();
   const [listIphone, setListIphone] = useState([
     {
       id: 1,
@@ -30,6 +31,7 @@ function StateIphone(props) {
     },
   ]);
   const searchTextI = (key) => {
+    setPrice();
     if (key) {
       setTitle(
         listIphone.filter((text) => {
@@ -41,8 +43,38 @@ function StateIphone(props) {
     }
   };
 
+  const sortPriceI = (sort) => {
+    sort = parseInt(sort);
+
+    if (sort) {
+      const sortListIphone = [...listIphone];
+      if (sort === 1) {
+        setPrice(
+          sortListIphone.filter((item) => {
+            return item;
+          })
+        );
+      } else if (sort === 2) {
+        setPrice(
+          sortListIphone.sort(function (a, b) {
+            return a.price - b.price;
+          })
+        );
+      } else if (sort === 3) {
+        setPrice(
+          sortListIphone.sort(function (a, b) {
+            return b.price - a.price;
+          })
+        );
+      }
+    } else {
+      setPrice();
+    }
+  };
   return (
-    <ListIphoneContext.Provider value={{ listIphone, searchTextI, title }}>
+    <ListIphoneContext.Provider
+      value={{ listIphone, searchTextI, title, sortPriceI, price }}
+    >
       {props.children}
     </ListIphoneContext.Provider>
   );

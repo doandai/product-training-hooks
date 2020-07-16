@@ -5,6 +5,7 @@ import { ListIphoneContext } from "../context/StateIphone";
 
 function Control() {
   const { listIphone } = useContext(ListIphoneContext);
+
   return (
     <div className="control">
       <Search />

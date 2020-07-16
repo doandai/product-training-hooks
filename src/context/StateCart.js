@@ -6,15 +6,16 @@ export const ListCartContext = createContext();
 function StateCart(props) {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState();
-  const [value, setValue] = useState();
   const initialState = JSON.parse(localStorage.getItem("listCart")) || [];
   const [listCart, setListCart] = useState(initialState);
   useEffect(() => {
     localStorage.setItem("listCart", JSON.stringify(listCart));
   }, [listCart]);
-  const addItem = (item) => {
-    const index = listCart.find((cart) => cart.id === item.id);
 
+  const addItem = (item) => {
+    setTitle();
+    setPrice();
+    const index = listCart.find((cart) => cart.id === item.id);
     if (index === undefined) {
       const newListCart = [...listCart];
       setListCart([
@@ -26,6 +27,7 @@ function StateCart(props) {
           img: item.img,
           stars: item.stars,
           quantity: 1,
+          total: item.price * 1,
         },
       ]);
     } else {
@@ -33,27 +35,30 @@ function StateCart(props) {
       newListCart.find((cart) => {
         if (cart.id === item.id) {
           cart.quantity += 1;
+          cart.total = cart.price * cart.quantity;
         }
       });
       setListCart(newListCart);
     }
-    setTitle("");
   };
   const removeItem = (id) => {
     const newList = [...listCart];
     setListCart(newList.filter((cart) => cart.id !== id));
     setTitle("");
+    setPrice();
   };
   const changeQuantity = (id, quantity) => {
     const newListCart = [...listCart];
     newListCart.find((cart) => {
       if (cart.id === id) {
         cart.quantity = quantity;
+        cart.total = cart.price * cart.quantity;
       }
     });
     setListCart(newListCart);
   };
   const searchTextC = (key) => {
+    setPrice();
     if (key) {
       setTitle(
         listCart.filter((text) => {
@@ -64,27 +69,28 @@ function StateCart(props) {
       setTitle("");
     }
   };
-  const sortPriceC = (value) => {
-    value = parseInt(value);
-    setValue(value);
-    if (value) {
+
+  const sortPriceC = (sort) => {
+    sort = parseInt(sort);
+
+    if (sort) {
       const sortListCart = [...listCart];
-      if (value === 1) {
+      if (sort === 1) {
         setPrice(
           sortListCart.filter((item) => {
             return item;
           })
         );
-      } else if (value === 2) {
+      } else if (sort === 2) {
         setPrice(
           sortListCart.sort(function (a, b) {
-            return a.price - b.price;
+            return a.total - b.total;
           })
         );
-      } else {
+      } else if (sort === 3) {
         setPrice(
           sortListCart.sort(function (a, b) {
-            return b.price - a.price;
+            return b.total - a.total;
           })
         );
       }
@@ -92,6 +98,7 @@ function StateCart(props) {
       setPrice();
     }
   };
+
   return (
     <ListCartContext.Provider
       value={{

@@ -17,7 +17,7 @@ function CartItem({ cart }) {
       changeQuantity(cart.id, quantity);
     }
   };
-  let total = quantity * cart.price;
+  let total = cart.quantity * cart.price;
   return (
     <tr>
       <th scope="row">
@@ -30,7 +30,7 @@ function CartItem({ cart }) {
       </td>
       <td>{cart.price}$</td>
       <td className="center-on-small-only">
-        <span className="qty">{quantity} </span>
+        <span className="qty">{cart.quantity} </span>
         <div className="btn-group radio-group" data-toggle="buttons">
           <label
             className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
