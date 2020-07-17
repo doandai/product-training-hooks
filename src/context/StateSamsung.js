@@ -23,7 +23,7 @@ function StateSamsung(props) {
     },
   ]);
   const searchTextS = (key) => {
-    console.log(key);
+    setPrice();
     if (key) {
       setTitle(
         listSamsung.filter((text) => {
